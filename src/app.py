@@ -38,7 +38,7 @@ def get_member_by_id(member_id):
 
 @app.route('/member', methods=['POST'])
 def add_member():
-    member =request.jsonify
+    member =request.json
     jackson_family.add_member(member)
     return jsonify({}), 200
 
